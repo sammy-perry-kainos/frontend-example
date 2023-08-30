@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "npx tsc && cp -R views dist && node dist/app.js",
-    "test": "npx tsc && cp -R views dist && node dist/app.js"
+    "start": "npx tsc && cp -R views dist && node dist/app.js"
   },
   "author": "",
   "license": "ISC",
