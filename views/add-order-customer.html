@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Order Customer</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Add Order Customer</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="container mt-4">
+			<section id="form" class="bg-light py-5">
+				<div class="container">
+                    <p>Enter product details:</p>
+                    <form action="/add-order-customer" method="post">
+                        <div class="form-group">
+                            {% if customers and customers.length > 0 %} 
+                            <label for="customerID">Customer Name</label>
+                            <select id="customerID" name="customerID" required>
+                                {% for customer in customers %}
+                                <option type="number" value="{{ customer.customerId }}">{{ customer.customerName }}</option>
+                                {% endfor %}
+                            </select>
+                            {% endif %}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </form>
+                </div>
+			</section>
+		</main>
+    </body>
+</html>

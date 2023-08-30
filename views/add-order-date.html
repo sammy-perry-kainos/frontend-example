@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Order Date</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Add Order Date</h1>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="container mt-4">
+			<section id="form" class="bg-light py-5">
+				<div class="container">
+                    <p>Enter product details:</p>
+                    <form action="/add-order-date" method="post">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="orderDate">Order Date</label>
+                                <input type="date" id="orderDate" name="orderDate" class="form-control" value="{{ current_date }}" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </form>
+                </div>
+			</section>
+		</main>
+    </body>
+</html>
